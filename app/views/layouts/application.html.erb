@@ -93,9 +93,9 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" style="min-height:550px;border:10px solid rgba(0,0,0,.1);">
+        <div class="carousel-inner" style="min-height:750px;border:10px solid rgba(0,0,0,.1);">
           <% @brands.each_with_index do |brand, index| %>
-            <div class="item <% if index == 0 %>active<% end %>" style="min-height:550px;background:url('<%= brand.main_image.url unless brand.main_image.nil? %>') 50% 125px no-repeat;">
+            <div class="item <% if index == 0 %>active<% end %>" style="min-height:750px;background:url('<%= brand.main_image.url unless brand.main_image.nil? %>') 50% 300px no-repeat;">
               <%#= image_fu brand.logo_image, "120x120#c" %>
 
               <div class="row" style="padding:30px 0 30px 0;">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-md-6" style="background-color:rgba(255,255,255,.7);">
                   <h1><%= brand.name %></h1>
-                  <%= raw brand.intro %>
+                  <span class="text-left"><%= raw brand.intro %></span>
                 </div>
 
               </div>
