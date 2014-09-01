@@ -82,99 +82,52 @@
 <!-- Portfolio Section -->
 <section id="brands" class="cbp-so-section cbp-so-init">
   <div class="container cbp-so-side cbp-so-side-top">
-    <h1>My latest work</h1>
+    <h1>RideCo Brands</h1>
 
-    <ul class="cat-list">
-      <li class="filter btn btn-outline-white btn-small" data-filter="all">All</li>
-      <li class="filter btn btn-outline-white btn-small" data-filter="web-design">Web design</li>
-      <li class="filter btn btn-outline-white btn-small" data-filter="ui-design">UI design</li>
-      <li class="filter btn btn-outline-white btn-small" data-filter="graphics">Graphics</li>
-      <li class="filter btn btn-outline-white btn-small" data-filter="add-ons">Add-Ons</li>
-    </ul>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <% @brands.each_with_index do |brand, index| %>
+            <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>"></li>
+          <% end %>
+        </ol>
 
-    <ul id="brands-grid" class="row brands-row">
-      <li class="brands-mix col-md-3 ui-design">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/whitepixels.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>Whitepixels - UI kit v1.1</h3>
-            <p class="brands-item-description">This is a great pack of premade graphics and web elements designed to help you create applications...</p>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="min-height:550px;border:10px solid rgba(0,0,0,.1);">
+          <% @brands.each_with_index do |brand, index| %>
+            <div class="item <% if index == 0 %>active<% end %>" style="min-height:550px;background:url('<%= brand.main_image.url %>') 50% 125px no-repeat;">
+              <%#= image_fu brand.logo_image, "120x120#c" %>
+
+              <div class="row" style="padding:30px 0 30px 0;">
+                <div class="col-md-3 col-md-offset-2">
+                  <%= image_tag brand.logo_image.url, class: 'img-responsive' %>
+                  <%#= image_tag brand.main_image.url %>
+                </div>
+                <div class="col-md-6" style="background-color:rgba(255,255,255,.7);">
+                  <h1><%= brand.name %></h1>
+                  <%= raw brand.intro %>
+                </div>
+
+              </div>
+              
+              <div class="carousel-caption">
+                
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
           </a>
-        </figure>
-      </li>
-      <li class="brands-mix col-md-3 web-design">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/redpoint.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>RedPoint - Responsive HTML Template</h3>
-            <p class="brands-item-description">RedPoint HTML is a responsive template built on Twitter Bootstrap grid. It contains 15 unique...</p>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
-        </figure>
-      </li>
-      <li class="brands-mix col-md-3 add-ons">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/breath.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>Breath - Vintage text Styles</h3>
-            <p class="brands-item-description">This is a pack of 10 Vintage text styles. You can use all these styles in web design or web apps but I've made...</p>
-          </a>
-        </figure>
-      </li>
-      <li class="brands-mix col-md-3 ui-design">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/flushui.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>Flush UI</h3>
-            <p class="brands-item-description">This is a pack of flat premade graphics and web elements designed to help you create applications, great online services...</p>
-          </a>
-        </figure>
-      </li>
-      <li class="brands-mix col-md-3 graphics">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/book-mockups.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>Hardcover Book Mockups</h3>
-            <p class="brands-item-description">If you are a writer, web designer or graphic designer and you need to showcase a book in minutes, this is the product you need.</p>
-          </a>
-        </figure>
-      </li>
-      <li class="brands-mix col-md-3 ui-design">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/cream-ui.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>Cream UI</h3>
-            <p class="brands-item-description">This is a great mobile UI pack designed to help you create applications for iPhone and iPad with Retina screen.</p>
-          </a>
-        </figure>
-      </li>
-      <li class="brands-mix col-md-3 graphics">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/bc-mockups.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>Business Card Mockups</h3>
-            <p class="brands-item-description">Now you can show your mousemade artwork to your clients with style. This is my second pack of Mockup Templates for your...</p>
-          </a>
-        </figure>
-      </li>
-      <li class="brands-mix col-md-3 graphics">
-        <figure class="brands-item">
-          <a href="#">
-            <img class="img-responsive" src="assets/analog-ui.jpg" alt="">
-            <div class="caption-bg"></div>
-            <h3>Analog - UI kit</h3>
-            <p class="brands-item-description">This is a great pack of premade graphics and elements designed to help you create applications, great online services...</p>
-          </a>
-        </figure>
-      </li>
-    </ul>
-    <p><a class="btn btn-outline-white btn-big" href="#">All my work</a></p>
+
+      </div>
+
+   
   </div>
 </section>
 <!-- End of Portfolio Section -->
