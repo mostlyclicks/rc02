@@ -681,6 +681,7 @@ a:hover {
    Portfolio Section
    ========================================================================== */
 #brands {
+
   text-align: center;
   padding: 100px 0;
   -webkit-box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.1);
@@ -885,16 +886,19 @@ a:hover {
    Testimonials Section
    ========================================================================== */
 #bike-advocacy {
+  background-image: url('/assets/bob_bw_blur.jpg');
+  background-size: cover;
   background-color: #ebebeb;
   text-align: center;
   padding: 100px 0;
   -webkit-box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.1);
+  color:#ffffff;
 }
 #bike-advocacy h1 {
   margin: 0 0 40px 0;
-  color: #717171;
+  color: #ebebeb;
 }
 .da-slider {
   width: 100%;
@@ -940,7 +944,7 @@ a:hover {
   opacity: 1;
 }
 .da-slide .block-cite {
-  color: #717171;
+  color: #ffffff;
   font-size: 14px;
   width: 70%;
   top: 130px;
@@ -952,7 +956,7 @@ a:hover {
 .da-slide blockquote {
   width: 70%;
   top: 150px;
-  color: #717171;
+  color: #fff;
   font-size: 18px;
   line-height: 26px;
   height: auto;
@@ -2247,7 +2251,7 @@ a:hover {
   text-align: center;
 }
 .footer p {
-  color: #b6d5be;
+  color: rgba(255,255,255,.5);
   line-height: 1.666666666666667;
   margin: 25px 0;
 }
