@@ -11,5 +11,17 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
+
+//= require modernizr.custom.28468
+//= require jquery.cslider
+//= require jquery.easing.1.3
+//= require jquery.mixitup
+//= require jquery.prettyPhoto
+//= require cbpScroller
+//= require classie
+
+//= require scripts
+
 //= require_tree .
